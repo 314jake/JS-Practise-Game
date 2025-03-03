@@ -18,9 +18,7 @@ function createTile(row, col) {
 
     const currTerrain = readCookie('terrain');
     const terrainSetting = settings.find((s) => s.settingName === 'terrain');
-    console.log(terrainSetting);
     const terrainColor = terrainSetting.values[currTerrain].terrainColor;
-    console.log(terrainColor);
     tile.style.backgroundColor = terrainColor;
     return tile;
 }

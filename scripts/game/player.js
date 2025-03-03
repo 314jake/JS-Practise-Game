@@ -13,7 +13,6 @@ export const player = {
     },
 
     set rCoord(newVal) {
-        console.log(`setting rCoord to ${newVal}`);
         if (typeof newVal !== 'number') {
             console.log(`New row co-ordinate not set; must be a number`)
         } else if (newVal > readCookie('board-size') || newVal <= 0) {
