@@ -15,10 +15,7 @@ main {
     top: 20%;
 }
 
-/*for testing
-.game-start-options-c * {
-    border: solid red 1px;
-}*/
+/*'newGameMenu' screen*/
 
 #game-start-options-c {
     border: solid black 0.1875rem;
@@ -133,6 +130,8 @@ main {
     font-size: 2rem;
 }
 
+/*'game' screen*/
+
 #game-c {
     display: none;
     flex-direction: row-reverse;
@@ -230,16 +229,14 @@ main {
     box-shadow: 0 0 0.25rem yellow;
 }
 
+
+/*no display on mobile*/
 @media only screen and (max-width: 768px) {
     #small-screen-msg {
         display: block;
     }
 
-    #game-start-options-c {
-        opacity: 0;
-    }
-
-    #game-c {
+    main section {
         opacity: 0;
     }
 }
