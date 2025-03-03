@@ -1,0 +1,245 @@
+body * {
+    font-family: "Anta", monospace;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#small-screen-msg {
+    display: none;
+    position: relative;
+    text-align: center;
+    top: 20%;
+}
+
+/*for testing
+.game-start-options-c * {
+    border: solid red 1px;
+}*/
+
+#game-start-options-c {
+    border: solid black 0.1875rem;
+    width: 40rem;
+    position: relative;
+    margin: 0 auto;
+    top: 2rem;
+}
+
+#game-start-options-c h2 {
+    text-align: center;
+    padding: 5% 0.5rem;
+    font-size: 3rem;
+}
+
+.options-table {
+    width: 90%;
+    position: relative;
+    margin: 2rem auto;
+}
+
+.options-table td {
+    height: 4rem;
+}
+
+.invisible-th {
+    height: 0;
+}
+
+#th-left {
+    width: 40%;
+}
+
+.option-label-td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-label {
+    font-size: 1.5rem;
+}
+
+.option-setting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.setting-button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 3rem;
+}
+
+.setting-button:hover {
+    background: radial-gradient(1.375rem, #ff0, #fff);
+}
+
+.setting-button img {
+    height: 3rem;
+}
+
+.setting-button img:active {
+    height: 2.75rem;
+}
+
+.option-value {
+    font-size: 4rem;
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    overflow: visible;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terrain-value {
+    font-size: 2rem;
+}
+
+#operations-c {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+.operation-button {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: white;
+    border: solid 0.125rem black;
+    box-shadow: 0 0 0.25rem gray;
+}
+
+.operation-button:hover {
+    text-shadow: 0 0 0.5rem yellow;
+    box-shadow: 0 0 0.25rem yellow;
+}
+
+#reset-button {
+    align-self: flex-end;
+    margin-right: 5.5rem;
+    position: relative;
+    bottom: 2.5rem;
+}
+
+#start-game-button {
+    font-size: 2rem;
+}
+
+#game-c {
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#board {
+    border: double 3px black;
+    display: grid;
+}
+
+.tile {
+    border: 3px solid black;
+    border-radius: 0.125rem;
+    
+    background-size: cover;
+}
+
+.tile:hover {
+    box-shadow: 0 0 10px 5px #ff8 inset;
+}
+
+#movement-controls-c {
+    width: 15rem;
+    height: 15rem;
+    border: double black 3px;
+
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#move-label-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movement-grid-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#move-label {
+    font-size: 1.625rem;
+}
+
+.movement-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#move-up img,
+#move-down img {
+    height: 3rem;
+}
+
+#move-up img:active,
+#move-down img:active {
+    height: 2.875rem;
+}
+
+#move-left img,
+#move-right img {
+    width: 3rem;
+}
+
+#move-left img:active,
+#move-right img:active {
+    width: 2.875rem;
+}
+
+#end-game-button {
+    font-size: 1rem;
+    background-color: white;
+    border: solid 0.0625rem black;
+    box-shadow: 0 0 0.125rem gray;
+    height: fit-content;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+#end-game-button:hover {
+    text-shadow: 0 0 0.5rem yellow;
+    box-shadow: 0 0 0.25rem yellow;
+}
+
+@media only screen and (max-width: 768px) {
+    #small-screen-msg {
+        display: block;
+    }
+
+    #game-start-options-c {
+        opacity: 0;
+    }
+
+    #game-c {
+        opacity: 0;
+    }
+}

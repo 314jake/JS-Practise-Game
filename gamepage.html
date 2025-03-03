@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<!--tab details here-->
+        <title>The Clone Game</title>
+        <link rel="icon" href="./resources/images/alien-face.ico" type="x-icon">
+
+<!--insert scripts here-->
+        <script src="./scripts/screen-nav.js" type="module" defer></script>
+	    <script src="./scripts/gamepage-load.js" type="module" defer></script>
+
+<!--insert stylesheets here-->
+        <link rel="stylesheet" href="./resources/stylesheets/reset.css" type="text/css">
+        <link rel="stylesheet" href="./resources/stylesheets/gamepage.css" type="text/css">
+
+<!--link imported fonts here-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+<!--basic meta settings. Insert description here.-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <meta name="description" content="The Clone Game">
+    </head>
+
+    <body>
+<!--Header-->
+        <header>
+
+        </header>
+
+<!--Main-->
+        <main>
+            <p id="small-screen-msg">Not suitable for mobile, please use a bigger screen</p>
+            <section id="game-start-options-c">
+                <h2>New game settings</h2>
+                <table class="options-table">
+                    <tbody>
+                        <tr>
+                            <th class="invisible-th" id="th-left"></th>
+                            <th class="invisible-th" id="th-right"></th>
+                        </tr>
+                        <tr class="option">
+                            <td class="option-label-td">
+                                <label for="board-size-setting" class="option-label">Board size</label>
+                            </td>
+                            <td>
+                                <div id="board-size-setting" class="option-setting">
+                                    <!--id must be "decrease-[setting name]"-->
+                                    <button id="decrease-board-size" class="setting-button">
+                                        <img src="./resources/images/left-arrow-black.webp" alt="decrease board size">
+                                    </button>
+                                    <!--id must be "[setting name]-value"-->
+                                    <p id="board-size-value" class="option-value"></p>
+                                    <!--id must be "increase-[setting name]"-->
+                                    <button id="increase-board-size" class="setting-button">
+                                        <img src="./resources/images/right-arrow-black.webp" alt="increase board size">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="option">
+                            <td class="option-label-td">
+                                <label for="difficulty-setting" class="option-label">Difficulty</label>
+                            </td>
+                            <td>
+                                <div id="difficulty-setting" class="option-setting">
+                                    <!--id must be "decrease-[setting name]"-->
+                                    <button id="decrease-difficulty" class="setting-button">
+                                        <img src="./resources/images/left-arrow-black.webp" alt="decrease difficulty">
+                                    </button>
+                                    <!--id must be "[setting name]-value"-->
+                                    <p id="difficulty-value" class="option-value"></p>
+                                    <!--id must be "increase-[setting name]"-->
+                                    <button id="increase-difficulty" class="setting-button">
+                                        <img src="./resources/images/right-arrow-black.webp" alt="increase difficulty">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="option">
+                            <td class="option-label-td">
+                                <label for="terrain-setting" class="option-label">Terrain</label>
+                            </td>
+                            <td>
+                                <div id="terrain-setting" class="option-setting">
+                                    <!--id must be "previous-[setting name]"-->
+                                    <button id="previous-terrain" class="setting-button">
+                                        <img src="./resources/images/left-arrow-black.webp" alt="previous terrain">
+                                    </button>
+                                    <!--id must be "[setting name]-value"-->
+                                    <p id="terrain-value" class="option-value"></p>
+                                    <!--id must be "next-[setting name]"-->
+                                    <button id="next-terrain" class="setting-button">
+                                        <img src="./resources/images/right-arrow-black.webp" alt="next terrain">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <section id="operations-c">
+                    <button id="reset-button" class="operation-button">Reset to defaults</button>
+                    <button id="start-game-button" class="operation-button">Start Game</button>
+                </section>
+            </section>
+            <section id="game-c">
+                <div id="movement-controls-c">
+                    <div class="movement-grid-child movement-grid-blank"></div>
+                    <div class="movement-grid-child movement-grid-button" id="move-up-c">
+                        <button class="movement-button" id="move-up">
+                            <img src="./resources/images/up-arrow-black.webp" alt="move up">
+                        </button>
+                    </div>
+                    <div class="movement-grid-child movement-grid-blank"></div>
+                    <div class="movement-grid-child movement-grid-button" id="move-left-c">
+                        <button class="movement-button" id="move-left">
+                            <img src="./resources/images/left-arrow-black.webp" alt="move left">
+                        </button>
+                    </div>
+                    <div class="movement-grid-child" id="move-label-c">
+                        <p id="move-label">MOVE</p>
+                    </div>
+                    <div class="movement-grid-child movement-grid-button" id="move-right-c">
+                        <button class="movement-button" id="move-right">
+                            <img src="./resources/images/right-arrow-black.webp" alt="move right">
+                        </button>
+                    </div>
+                    <div class="movement-grid-child movement-grid-blank"></div>
+                    <div class="movement-grid-child movement-grid-button" id="move-down-c">
+                        <button class="movement-button" id="move-down">
+                            <img src="./resources/images/down-arrow-black.webp" alt="move down">
+                        </button>
+                    </div>
+                    <div class="movement-grid-child movement-grid-blank"></div>
+                </div>
+                <button id="end-game-button">End Game</button>
+            </section>
+        </main>
+
+<!--Footer-->
+        <footer>
+
+        </footer>
+    </body>
+</html>
