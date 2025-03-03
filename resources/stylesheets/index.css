@@ -1,0 +1,29 @@
+body * {
+    font-family: "Anta", monospace;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: black;
+    border: solid black 3px;
+}
+
+a:hover {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
