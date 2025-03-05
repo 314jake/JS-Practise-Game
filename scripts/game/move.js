@@ -37,5 +37,5 @@ export function movePlayer(to){
 
     //set image of new tile
     const newTile = document.querySelector(`#r${readCookie('player-r-coord')}c${readCookie('player-c-coord')}`);
-    newTile.style.backgroundImage = "url('/resources/images/alien-face.webp')";
+    newTile.style.backgroundImage = "url('./resources/images/alien-face.webp')";
 }
